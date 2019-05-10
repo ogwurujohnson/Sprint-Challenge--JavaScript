@@ -15,7 +15,15 @@ function consume(value1, value2, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-
+function add(number1, number2) {
+  return console.log(number1+number2);
+}
+function multiply(number1, number2) {
+  return console.log(number*number2);
+}
+function greeting(firstname, lastname) {
+  return console.log(`Hello ${firstname} ${lastname}, nice to meet you!`);
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // consume(2,2,add); // 4
