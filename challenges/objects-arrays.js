@@ -75,6 +75,7 @@ const universities = [];
 for(let i = 0; i<=graduates.length-1; i++) {
   universities.push(graduates[i].university);
 }
+console.log('--------universities---------')
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -84,6 +85,10 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+for(let i =0; i<=graduates.length-1; i++) {
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+}
+console.log('-------contact info-----------')
 console.log(contactInfo);
 
 
