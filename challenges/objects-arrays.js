@@ -129,7 +129,8 @@ The zoo wants to display both the scientific name and the animal name in front o
 const animalNames = [];
 zooAnimals.forEach(function(animal) {
   animalNames.push(`Name:${animal.animal_name}, Scientific: ${animal.scientific_name}`)
-})
+});
+
 console.log('-----------Animal Names and scientific names-----------')
 console.log(animalNames);
 
@@ -143,7 +144,8 @@ const lowerCase = [];
 zooAnimals.map(function(animal) {
   lowerCase.push(animal.animal_name.toLowerCase());
 });
-console.log('---------Animal Names in lower case');
+
+console.log('---------Animal Names in lower case----------');
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -155,6 +157,7 @@ const largerPopulation = [];
 largerPopulation.push(zooAnimals.filter(function(animal) {
   return animal.population < 5;
 }));
+
 console.log('--------population-------')
 console.log(largerPopulation);
 
@@ -164,12 +167,14 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 
-console.log('--------zoo-----------')
+
 let populationTotal = 0;
 const value = zooAnimals.reduce(function(sum, animal) {
   return sum + animal.population;
 },0);
 populationTotal = value;
+
+console.log('--------zoo Total-----------')
 console.log(populationTotal);
 
 
@@ -179,3 +184,24 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
+const animalNamesEs6 = [];
+zooAnimals.forEach((animal) => {
+  animalNamesEs6.push(`Name:${animal.animal_name}, Scientific: ${animal.scientific_name}`)
+});
+console.log('-----------Animal Names and scientific names ES6-----------')
+console.log(animalNamesEs6);
+
+const lowerCaseEs6 = [];
+lowerCaseEs6.push(zooAnimals.map(animal => animal.animal_name.toLowerCase()));
+console.log('---------Animal Names in lower case ES6------------');
+console.log(lowerCaseEs6); 
+
+const largerPopulationEs6 = [];
+largerPopulationEs6.push(zooAnimals.filter(animal => animal.population < 5));
+console.log('--------population ES6-------')
+console.log(largerPopulationEs6);
+
+let populationTotalEs6 = 0
+populationTotalEs6 = zooAnimals.reduce((sum, animal) => sum + animal.population,0);
+console.log('--------zoo Total ES6-----------')
+console.log(populationTotalEs6);
