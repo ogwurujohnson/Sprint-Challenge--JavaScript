@@ -30,13 +30,36 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+ - The `.forEach` like the `.map` is a method used to loop through an array, but the `.forEach` has the ability to mutate the original array
+ - while `.map` doesn't mutate the array, but rather it returns a new array containing changed or mutated value from the original array,
+    keeping the old array un-mutated.
+
 2. What is the difference between a function and a method?
+
+    - A function is something that takes bunch of inputs and returns one or more values 
+        while;
+    - A method is a function but a function that is declared within a class
 
 3. What is closure?
 
+    - A closure is a feature in  Javascript where an innner function has access to the outer or enclosing function variables even after the 
+    outer function has finished running. Getify in his series, 'you dont know JS', defined it to be a way to "remember" and continue to access a function's scope (its variables) even once the function has finished running.
+
+
 4. Describe the four rules of the 'this' keyword.
 
+    - 1. window/global object binding
+            - this principle implies that the 'this' keyword refers to the global object when it is used inside the global scope
+    - 2. implicit binding
+            - this priniciple implies that the 'this' keyword refers to the object where its been used. and it occurs when dot notation is used to invoke a function.
+    3. new binding
+            - Here the 'this' keyword refers to any object created due to the invocation of a constructor function
+    4. explicit binding
+            - Explicit binding of 'this' occurs when .call(), .apply(), or .bind() are used on a function. explicit because you are explicitly passing in a 'this' context to call() or apply().
+
 5. Why do we need super() in an extended class?
+
+    - super() calls the constructor of the parent class. It's job in  inheritance could be likened to that done by Parent.call() or Object.create().
 
 ## Project Set up
 
